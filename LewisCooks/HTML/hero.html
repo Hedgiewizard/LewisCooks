@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/Hero Image</title>
+    <!--added fonts and stuff-->
+    <link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/mostPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+    <img a="https://www.recipegirl.com/wp-content/uploads/2007/12/Chocolate-Peppermint-Bark-Cookies-1.jpg">
+    <div id="pb">
+        <h1><b>Peppermint Bark</b></h1>
+    </div>
+    <h2>&nbsp The Holiday's are apon us and family is getting together. At these family gatherings everyone is expected to bring stuff. If you clicked on this you either 1) procrastinated and are tring to find something quick and easy to make or... 2) you
+        like Peppermint Bark. <a href="#StartTheResipie">Click to skip</a></h2>
+    <div id="bark">
+        <img src="https://dinnerthendessert.com/wp-content/uploads/2018/12/Peppermint-Bark-2.jpg">
+    </div>
+    <div class="content">
+        <a id="StartTheResipie">Ok, now that's out of the way lets get started.<a>
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+        <h2>What you will need</h2>
+        <ol>
+            <li><i class="fas fa-candy-cane"></i>&nbsp <span id="ingredient-whiteChocolate">12</span> oz. quality white chocolate, chopped into large chunks and divided</li>
+            <li><i class="fas fa-candy-cane"></i>&nbsp <span id="ingredient-semiChocolate">8</span> oz. quality semisweet chocolate, chopped into large chunks</li>
+            <li><i class="fas fa-candy-cane"></i>&nbsp <span id="ingredient-oil">1.5</span> tsp. vegetable or canola oil (shortening works as well, see notes)</li>
+            <li><i class="fas fa-candy-cane"></i>&nbsp <span id="ingredient-peppermint">1.5</span> tsp. peppermint extract, divided</li>
+            <li><i class="fas fa-candy-cane"></i>&nbsp <span id="ingredient-vanilla">0.5</span> tsp. vanilla extract, divided</li>
+            <li><i class="fas fa-candy-cane"></i>&nbsp <span id="ingredient-candyCanes">0.25</span> c. crushed candy canes or peppermints</li>
+            <li><i class="fas fa-candy-cane"></i>&nbsp <span id="ingredient-sprinkles">2</span> tbsp. red and white sprinkles (optional)</li>
+        </ol>
+        <p id="directions">DIRECTIONS:
+            <ul>
+                <ol>Line an 8-inch or 9-inch square baking pan with parchment paper or foil, set aside.</ol>
+                <ol>In a medium microwave-safe mixing bowl, melt 6 ounces of white chocolate with 1/2 teaspoon of oil. Melt for 15 seconds, stir, repeat until the chocolate is completely melted and smooth. Take care not to burn the chocolate. Stir in 1/2 teaspoon of peppermint extract and 1/4 teaspoon of vanilla extract.</ol>
+                <ol> Pour the white chocolate into the prepared pan. Using an offset spatula, spread the chocolate to create a smooth, even layer. Place in the refrigerator for 15 minutes to firm up. Do not leave it any longer.</ol>
+                <ol>Meanwhile, in a medium microwave-safe mixing bowl, melt 8 ounces of semisweet chocolate with 1/2 teaspoon of oil. Melt for 15 seconds, stir, repeat until the chocolate is completely melted and smooth. Take care not to burn the chocolate. Stir in 1/2 teaspoon of peppermint extract.</ol>
+                <ol>Remove the pan from the refrigerator and pour the semisweet chocolate over the white chocolate. Carefully spread into a smooth, even layer. Place in the refrigerator for 15 minutes to firm up. Do not leave it any longer.</ol>
+                <ol>In a medium microwave-safe mixing bowl, melt remaining 6 ounces of white chocolate with 1/2 teaspoon of oil. Melt for 15 seconds, stir, repeat until the chocolate is completely melted and smooth. Take care not to burn the chocolate. Stir in the remaining 1/2 teaspoon of peppermint extract and 1/4 teaspoon of vanilla extract.</ol>
+                <ol>Pour the white chocolate over the semisweet chocolate. Using an offset spatula, spread the chocolate to create a smooth, even layer. Top with crushed candy canes or peppermints (and sprinkles if desired). Place in the refrigerator and chill until fully set, about one hour. Break into pieces and store in the refrigerator.</ol>
+            </ul>
+            
+        </p>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // whiteChocolate Calculation
+       let whiteChocolate = document.querySelector("#ingredient-whiteChocolate");
+       whiteChocolate.textContent = 12 * value;
+       
+       // semisweet Chocolate Calculation
+       let semiChocolate = document.querySelector("#ingredient-semiChocolate");
+       semiChocolate.textContent = 8 * value;
+       
+       // oil Calculation
+       let oil = document.querySelector("#ingredient-oil");
+       oil.textContent = 1.5 * value;
+       
+       // peppermint Calculation
+       let peppermint = document.querySelector("#ingredient-peppermint");
+       peppermint.textContent = 1.5 * value;
+       
+       // vanilla Calculation
+       let vanilla = document.querySelector("#ingredient-vanilla");
+       vanilla.textContent = 0.5 * value;
+       
+       // candycanes Calculation
+       let candyCanes = document.querySelector("#ingredient-candyCanes");
+       candyCanes.textContent = 0.25 * value;
+       
+       // whiteSurgar Calculation
+       let sprinkles = document.querySelector("#ingredient-sprinkles");
+       sprinkles.textContent = 2 * value;
+    });
+</script>
+</html>

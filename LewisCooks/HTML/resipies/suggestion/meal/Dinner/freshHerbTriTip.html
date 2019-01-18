@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/Fresh Herb and Spice Reverse Seared Tri-tip </title>
+    <!--added fonts and stuff-->
+    <link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/mostPage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<style>
+    html { 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Shadows Into Light', cursive;
+        grid-column: 6;
+        grid-row: 4;
+        }
+     #pb{
+        font-size: 30px;
+        font-style: oblique;
+        color: #710D0D;
+        text-align: center;
+        width: auto;
+        padding-left: 1%;
+
+        }
+    .content{
+        margin-top: 1.5em;
+        padding-top: 1%;
+        margin-left: 3.5em;
+        margin-right: 4.5em;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        font-family: 'Thasadith', sans-serif;
+        padding-bottom: 15%;
+        font-size: 15px;
+        }
+    #head{
+        font-size: 50px;
+        justify-content: center;
+        }
+    #what{
+        flex-direction: column;
+        column-count: 2;
+        }
+    .nav-button{
+        /*background-color: aliceblue;*/
+        background-color: blue;
+        min-width: 100px;
+        min-height: 40px;
+        max-width: 95%;
+        max-height: 90px;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 4px;
+        padding-left: 15px;
+        }
+    #bark img{
+        width: 100%;
+        height: auto
+        }
+    #directions{
+        size:15px;
+        }
+    </style>
+<body>
+    <img a="https://www.recipegirl.com/wp-content/uploads/2007/12/Chocolate-Peppermint-Bark-Cookies-1.jpg">
+    <div id="pb">
+        <h1><b>Fresh Herb and Spice Reverse Seared Tri-tip </b></h1>
+    </div>
+        <h2>&nbsp; Looking for a tasty meat, that is bound to become a family favorite? Try this fresh herb and spice reverse seared tri-tip <a href="#StartTheResipie">Click to skip</a></h2>
+        <div id="bark">
+            <img src="https://cdn.shopify.com/s/files/1/0956/3950/articles/ButcheryFresh_Meat-86_b0eca01f-4db1-4ba0-80cb-67da7b87cfb2.jpg?v=1479238261">
+        </div>
+    <div class="content">
+        <a id="StartTheResipie">Ok, now that's out of the way lets get started.<a>
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+            <p>Prep Time: 10 minutes 
+                <br>Cook Time: 1 hour
+            </p>
+    <div id="what-you-will-need">
+        <h2>What you will need</h2>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-cloves">2</span> garlic cloves minced</ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-paprika">2</span>tsp smoked paprika </ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-peper">1</span> tsp ground pepper </ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-salt">1.5</span>tsp coarse sea salt </ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-basil">1</span>tbsp finely chopped fresh basil </ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-oregano">1</span>bsp finely chopped oregano </ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-oil">2</span>tbsp Olive Oil (if using the oven method, only enough to make a paste) </ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-tip">2.5</span>ish lb Tri-tip</ol>
+    </div>
+    <div id="how-to">
+        <h2>DIRECTIONS</h2>
+        <ol>1. &nbsp;In a flat shallow container mix together eggs, cinnamon, vanilla. </ol>
+        <ol>2. &nbsp;Than quickly supmerge each side of each slice of bread. </ol>
+        <ol>3. &nbsp;After you do that place it on a warm pan. </ol>
+        <ol>4. &nbsp;Once both sides are barely golden take off heat. Eat warm. Top with syrup, whipped cream, powdered sugar, and/or fruit.</ol>
+    </div>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // eggs Calculation
+       let cloves = document.querySelector("#ingredient-cloves");
+       cloves.textContent = 2 * value;
+       
+       // paprika Calculation
+       let paprika = document.querySelector("#ingredient-paprika");
+       paprika.textContent = 2 * value;
+       
+       // peper Calculation
+       let peper = document.querySelector("#ingredient-peper");
+       peper.textContent = 1 * value;
+       
+       // salt Calculation
+       let salt = document.querySelector("#ingredient-salt");
+       salt.textContent = 1.5 * value;
+       
+       // basil Calculation
+       let basil = document.querySelector("#ingredient-basil");
+       basil.textContent = 1 * value;
+       
+       // oregano Calculation
+       let oregano = document.querySelector("#ingredient-oregano");
+       oregano.textContent = 1 * value;
+       
+       // oil Calculation
+       let oil = document.querySelector("#ingredient-oil");
+       oil.textContent = 2 * value;
+       
+       // tip Calculation
+       let tip = document.querySelector("#ingredient-tip");
+       tip.textContent = 2.5 * value;
+    });
+</script>
+</html>

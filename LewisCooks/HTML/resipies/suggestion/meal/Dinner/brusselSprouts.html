@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/Brussel Sprouts</title>
+    <!--added fonts and stuff-->
+    <link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/mostPage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<style>
+    html { 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Shadows Into Light', cursive;
+        grid-column: 6;
+        grid-row: 4;
+        }
+     #pb{
+        font-size: 30px;
+        font-style: oblique;
+        color: #710D0D;
+        text-align: center;
+        width: auto;
+        padding-left: 1%;
+        }
+    .content{
+        margin-top: 1.5em;
+        padding-top: 1%;
+        margin-left: 3.5em;
+        margin-right: 4.5em;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        font-family: 'Thasadith', sans-serif;
+        padding-bottom: 15%;
+        font-size: 15px;
+        }
+    #head{
+        font-size: 50px;
+        justify-content: center;
+        }
+    #what{
+        flex-direction: column;
+        column-count: 2;
+        }
+    .nav-button{
+        /*background-color: aliceblue;*/
+        background-color: blue;
+        min-width: 100px;
+        min-height: 40px;
+        max-width: 95%;
+        max-height: 90px;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 4px;
+        padding-left: 15px;
+        }
+    #bark img{
+        width: 100%;
+        height: auto
+        }
+    #directions{
+        size:15px;
+        }
+    </style>
+<body>
+    <img a="https://www.recipegirl.com/wp-content/uploads/2007/12/Chocolate-Peppermint-Bark-Cookies-1.jpg">
+    <div id="pb">
+        <h1><b>Brussel Sprouts with Toasted Pecans</b></h1>
+    </div>
+        <h2>&nbsp; Normal plain brussel sprouts can be grose but these are dilishus for vegtable lovers and haters alike. <a href="#StartTheResipie">Click to skip</a></h2>
+        <div id="bark">
+            <img src="https://www.diamondnuts.com/wp-content/uploads/pecan-brussel-sprout-recipe.jpg">
+        </div>
+    <div class="content">
+        <a id="StartTheResipie">Ok, now that's out of the way lets get started.<a>
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+            <p>Prep Time: 10 minutes 
+                <br>Cook Time: 25 minutes
+            </p>
+    <div id="what-you-will-need">
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-oliveOil">1</span> olive oil</ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-cinnamon">4</span>oz pecans</ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-vanilla">8</span>oz brussel sprouts</ol>
+        <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-milk">0.5</span> tsp lemon juice</ol>
+    </div>
+    <div id="how-to">
+        <h2>DIRECTIONS</h2>
+        <ol>1. &nbsp;Bring olive oil to medium heat in a stovetop and oven safe dish. Add 4oz pecans to the pan and coat with the olive oil, then add a pinch of sea salt. Toast lightly by stirring pecans in pan every 1-2 minutes. Remove from pan once pecans start to brown. Dish will be reused. Do not discard or clean because you will want the pecan infused oil to cook your brussels sprouts in.</ol>
+        <ol>2. &nbsp;Remove stem and half 8 oz of brussels sprouts. Place halves cut side down in the previously used, seasoned and oiled oven safe dish. Use Bake at 400* for 15 minutes or top is starting to brown. Remove from oven. Combine toasted pecans and brussels sprouts into a bowl. Toss with ½ tsp lemon juice. Salt pepper to taste.</ol>
+    </div>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // oliveOil Calculation
+       let oliveOil = document.querySelector("#ingredient-oliveOil");
+       oliveOil.textContent = 1 * value;
+       
+       // sugar Calculation
+       let sugar = document.querySelector("#ingredient-cinnamon");
+       sugar.textContent = 4 * value;
+       
+       // vanilla Calculation
+       let vanilla = document.querySelector("#ingredient-vanilla");
+       vanilla.textContent = 8 * value;
+       
+       // milk Calculation
+       let milk = document.querySelector("#ingredient-milk");
+       milk.textContent = 0.5 * value;
+    });
+</script>
+</html>

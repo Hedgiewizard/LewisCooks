@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/American Apple and Aprocot Cake</title>
+    <!--added fonts and stuff-->
+    <link rel="stylesheet" type="text/css" href="../CSS/mostPage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+</head>
+<style type="text/css">
+    html {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: 'Shadows Into Light', cursive;
+            grid-column: 6;
+            grid-row: 4;
+        }
+
+        #pb {
+            font-size: 30px;
+            font-style: oblique;
+            color: #710D0D;
+            width: auto;
+            padding-left: 1%;
+            margin: 0 32% 0 32%;
+        }
+
+        .content {
+            margin-top: 1.5em;
+            padding-top: 1%;
+            margin-left: 3.5em;
+            margin-right: 4.5em;
+            padding-left: 3.5%;
+            padding-right: 3.5%;
+            font-family: 'Thasadith', sans-serif;
+            padding-bottom: 15%;
+            font-size: 15px;
+        }
+
+        #headerOne {
+            font-size: 50px;
+            justify-content: center;
+            padding: 0% 22% 0% 22%;
+        }
+
+        #what {
+            flex-direction: column;
+            column-count: 2;
+        }
+
+        .nav-button {
+            /*background-color: aliceblue;*/
+            background-color: blue;
+            min-width: 100px;
+            min-height: 40px;
+            max-width: 95%;
+            max-height: 90px;
+            border-radius: 30px;
+            font-size: 20px;
+            padding: 4px;
+            padding-left: 15px;
+        }
+
+        #cookie img {
+            width: 100%;
+            height: auto
+        }
+
+        #directions {
+            size: 15px;
+        }
+</style>
+<body>
+    <h2 id="headerOne">American Apple and Aprocot Cake<h2>
+  <div>
+    <div class="content">
+    <p id="HeaderTwo"> <a href="#StartTheResipie">I know I don't always want to hear the history so here is a link straight to the recipe. </a>
+        </p>
+      <div id="cookie">
+        <img src="http://www.laineybakes.co.uk/wp-content/uploads/slice-of-apple-cake-1576x1139.jpg">
+      </div>
+    <p id="history">&nbsp My little sister, <a href="https://www.instagram.com/ladykatemakes/">Kate</a> loves to bake. We would she would watch the <a href="https://www.netflix.com/title/80063224">The Great British Baking Show(we watched it on Netflix(makes for a good Sunday family activity))</a> and everything. So, one day my Parents got her a Mery Berry Cookbook. She uses it all the time now. In fact most of the cakes in on this website are from that book, including this one.</p>
+    <a id="StartTheResipie">Ok, now that's out of the way lets get started.<a>   
+    <div id="rsesipie">
+        <div id="cook-time">
+        <p>
+        </p>
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+            <p>Prep Time: 15 minutes 
+                <br>Cook Time: 1.25-1.5 hours
+            </p>
+        </div>
+        <div id="put-in">
+        <p><b>What you need... A scale and this...</b></p>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-flour">250</span> grams of self-raising flour
+            </ul>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-bakingPowder">1</span> teaspoon(s) baking powder
+            </ul>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-casterSugat">225</span> grams of caster sugar
+            </ul>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-eggs">2</span> eggs
+            </ul>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-almondExtract">0.5</span> teaspoon(s) of almond extract
+            </ul>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-butter">150</span> grams of butter melted
+            </ul>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-apricots">100</span> grams of ready-to-eat dried apricots snipped into pieces
+            </ul>
+            <ul><i class="fas fa-circle"></i>&nbsp;<span id="ingredient-almonds">25</span> grams of flaked almonds
+            </ul>
+        </div>
+        <div>
+        <p><b>How To Do It</b></p>
+            <ol>1. &nbsp; Lightly grease the cake tin and line the bace with a circle of non-stick baking parchment. Pre-heat the oven to 325F. Put the flour, baking powder, sugar, eggs, almond extract and melted butter into a large bowl. Mix well to combine, then beat well for 1 minute; and electric mixer is best for this but of course you can also beat by hand with a wooden spoon. Add the apples and apricots to the bowl and gently mix them in.</ol>
+            <ol>2. &nbsp; spoon the mixture into the prepared tin, gently level the suface and sprinkle with the flaked almonds.</ol>
+            <ol>3. &nbsp; Bake for 1-1.5 hours, until the cake is golden, firm to the touch and beginning to shrin away from the sides of the tin. Allow to cool in the tin for a few minutes, then turn out on to a plate to serve.</ol>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // flour Calculation
+       let flour = document.querySelector("#ingredient-flour");
+       flour.textContent = 250 * value;
+       
+       // brownSugar Calculation
+       let bakingPowder = document.querySelector("#ingredient-bakingPowder");
+       bakingPowder.textContent = 1 * value;
+       
+       // whiteSurgar Calculation
+       let casterSugat = document.querySelector("#ingredient-casterSugat");
+       casterSugat.textContent = 255 * value;
+       
+       // flour Calculation
+       let eggs = document.querySelector("#ingredient-eggs");
+       eggs.textContent = 2 * value;
+       
+       // butter Calculation
+       let almondExtract = document.querySelector("#ingredient-almondExtract");
+       almondExtract.textContent = 0.5 * value;
+       
+       // salt Calculation
+       let butter = document.querySelector("#ingredient-butter");
+       butter.textContent = 150 * value;
+       
+       // Chocolate Chip Calculation
+       let apricots = document.querySelector("#ingredient-apricots");
+       apricots.textContent = 100 * value;
+       
+       // butter Calculation
+       let almonds = document.querySelector("#ingredient-almonds");
+       almonds.textContent = 25 * value;
+    });
+</script>
+</html>

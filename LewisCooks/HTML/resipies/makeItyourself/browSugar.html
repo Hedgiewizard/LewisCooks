@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/cookies/</title>
+    <!--added fonts and stuff-->
+    <link ref="stylesheet" type="text/scss" href="/LewisCooks/HTML/resipies/makeItyourself/brownSugar.html">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link ref="stylesheet" type="text/scss" href="grace-capstone-project/">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <style>
+    html { 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Shadows Into Light', cursive;
+        grid-column: 6;
+        grid-row: 4;
+        }
+    #headbox{
+        width: auto;
+        min-height: 50px;
+        max-height: 250px;
+        background-color: aqua;
+        padding-left: 1%;
+        margin: 0 25% 0 25%;
+        }
+    #head{
+        font-size: 50px;
+        justify-content: center;
+        }
+    .nav-button{
+        /*background-color: aliceblue;*/
+        background-color: blue;
+        min-width: 100px;
+        min-height: 40px;
+        max-width: 95%;
+        max-height: 90px;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 4px;
+        padding-left: 15px;
+        }
+    .content{
+        margin-top: 1.5em;
+        padding-top: 1%;
+        margin-left: 3.5em;
+        margin-right: 4.5em;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        font-family: 'Thasadith', sans-serif;
+        }
+    #headerOne{
+        font-family: 'Shadows Into Light', cursive;
+        align-items: center;
+        font-size: 55px;
+        margin: 0% 37% 0% 37%
+        }
+    #heading{
+        margin-top: 1.5em;
+        padding-top: 1%;
+        margin-left: 3.5em;
+        margin-right: 4.5em;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        }
+    #sugar img{
+        width: 42%;
+        height: auto;
+        margin: 0% 30% 0% 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="headerOne">Brown Sugar</h1>
+    <h2 id="heading">&nbsp Run out of brown sugar or you want to try something new? Make your own! It is fast and, easy.</h2>
+    <div class="content" id="sugar">
+        <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.realsimple.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Frs_medium_image%2Fpublic%2Fbrown-sugar-measuring-cups.jpg%3Fitok%3DduLinkIc%261513872705&amp;w=1150&amp;c=sc&amp;poi=face&amp;q=85">
+    <div id="howTo" class="content">
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+        <div id="ingredients">
+            <span id="ingredient-whiteSugar">2</span> C White sugar
+            <span id="ingredient-molasses">2.5</span> Tbsp Molasses
+            <!---makes #of cups(will use in equation)--->
+        </div>
+        <div id="instructions">
+            <p>&nbsp; Combine the white sugar and molasses(add little extra for a richer taste) together in a bowl or even in your electric mixer with the wire whisks. Once combined set aside.
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // White Sugar Calculation
+       let whiteSugar = document.querySelector("#ingredient-whiteSugar");
+       whiteSugar.textContent = 2 * value;
+       
+       // Brown Sugar Calculation
+       let molasses = document.querySelector("#ingredient-molasses");
+       molasses.textContent = 2.5 * value;
+    });
+</script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/French Toast</title>
+    <!--added fonts and stuff-->
+    <link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/mostPage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<style>
+    html { 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Shadows Into Light', cursive;
+        grid-column: 6;
+        grid-row: 4;
+        }
+     #pb{
+        font-size: 30px;
+        font-style: oblique;
+        color: #710D0D;
+        text-align: center;
+        width: auto;
+        padding-left: 1%;
+        margin: 0 33% 0 33%;
+        }
+    .content{
+        margin-top: 1.5em;
+        padding-top: 1%;
+        margin-left: 3.5em;
+        margin-right: 4.5em;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        font-family: 'Thasadith', sans-serif;
+        padding-bottom: 15%;
+        font-size: 15px;
+        }
+    #head{
+        font-size: 50px;
+        justify-content: center;
+        }
+    #what{
+        flex-direction: column;
+        column-count: 2;
+        }
+    .nav-button{
+        /*background-color: aliceblue;*/
+        background-color: blue;
+        min-width: 100px;
+        min-height: 40px;
+        max-width: 95%;
+        max-height: 90px;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 4px;
+        padding-left: 15px;
+        }
+    #bark img{
+        width: 100%;
+        height: auto
+        }
+    #directions{
+        size:15px;
+        }
+    </style>
+<body>
+    <img a="https://www.recipegirl.com/wp-content/uploads/2007/12/Chocolate-Peppermint-Bark-Cookies-1.jpg">
+    <div id="pb">
+        <h1><b>French Toast</b></h1>
+    </div>
+        <h2>&nbsp; You got a crapton of bread that you need to get rid off and hungry mouths. This is a great resipe to help you with that. When ever my family makes french toast we run out of bread. <a href="#StartTheResipie">Click to skip</a></h2>
+        <div id="bark">
+            <img src="http://mommymouseclubhouse.com/wp-content/uploads/2017/10/French-Toast-2-768x542.jpg">
+        </div>
+    <div class="content">
+        <a id="StartTheResipie">Ok, now that's out of the way lets get started.<a>
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+    <div id="what-you-will-need">
+        <h2>What you will need</h2>
+        <ol><i class="fas fa-bed"></i>&nbsp; Bread </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-eggs">4</span> Eggs </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-cinnamon">0.5</span> teaspoon Cinnamon </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-vanilla">0.5</span> teaspoon Vanilla </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-milk">0.125</span> cup milk or just a splash</ol>
+    </div>
+    <div id="how-to">
+        <h2>DIRECTIONS</h2>
+        <ol>1. &nbsp;In a flat shallow container mix together eggs, cinnamon, vanilla. </ol>
+        <ol>2. &nbsp;Than quickly supmerge each side of each slice of bread. </ol>
+        <ol>3. &nbsp;After you do that place it on a warm pan. </ol>
+        <ol>4. &nbsp;Once both sides are barely golden take off heat. Eat warm. Top with syrup, whipped cream, powdered sugar, and/or fruit.</ol>
+    </div>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // eggs Calculation
+       let eggs = document.querySelector("#ingredient-eggs");
+       eggs.textContent = 4 * value;
+       
+       // sugar Calculation
+       let sugar = document.querySelector("#ingredient-cinnamon");
+       sugar.textContent = 0.5 * value;
+       
+       // vanilla Calculation
+       let vanilla = document.querySelector("#ingredient-vanilla");
+       vanilla.textContent = 0.5 * value;
+       
+       // milk Calculation
+       let milk = document.querySelector("#ingredient-milk");
+       milk.textContent = 0.125 * value;
+    });
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/Hero Image</title>
+    <!--added fonts and stuff-->
+    <link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/mostPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+    <img a="https://www.recipegirl.com/wp-content/uploads/2007/12/Chocolate-Peppermint-Bark-Cookies-1.jpg">
+    <div id="pb">
+        <h1><b>Pancakes</b></h1>
+    </div>
+        <h2>&nbsp You're in a good mood and you want a classic breakfast. Pancakes are a great choice. They are easy and tasty. We make these all the time. They are great with side of eggs and bacon. <a href="#StartTheResipie">Click to skip</a></h2>
+        <div id="bark">
+            <img src="http://www.pamelasproducts.com/wp-content/uploads/2012/09/P-BPM_05-1024x683.jpg">
+        </div>
+    <div class="content">
+        <a id="StartTheResipie">Ok, now that's out of the way lets get started.<a>
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+    <div id="what-you-will-need">
+        <h2>What you will need</h2>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-flour">1</span> cup all-purpose flour </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-sugar">1</span> tablespoon sugar </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-bakingPowder">2</span> teaspoon baking powder </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-salt">0.25</span> teaspoon salt </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-egg">1</span> beaten egg </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-milk">1</span> cup milk </ol>
+        <ol><i class="fas fa-bed"></i>&nbsp; <span id="ingredient-cookingOil">2</span> tablespoons cooking oil </ol>
+    </div>
+    <div id="how-to">
+        <h2>DIRECTIONS</h2>
+        <ul> &nbsp;In a medium bowl stir together the flour(1 cup), sugar(1 tablespoon), baking powder(2 teaspoons), and salt(¼ teaspoon). Make a well in the center if the dry mixture; set aside. </ul>
+        <ul> &nbsp;In a another medium bowl or in a liquid measuring cup holds at at least 2 cups(it makes less dishes to mix them in the measuring cup just make sure you add the milk first) combine the milk(1 cup milk), egg(1), and cooking oil(2 tablespoons). </ul>
+        <ul> &nbsp;Add the liquid mixture to the dry mixture and than stir until combined.(this mixture should be lumpy) </ul>
+        <ul> &nbsp;For standard-size pancakes, pour ¼ cup batter on to a hot, lightly greased griddle or heavy skillie. Cook over medium heat for about 2 minutes or until  pancakes are golden brown, turning to second side when pancakes have bubble surfaces and edges are slightly dry. Serve warm. Top with syrup, whipped cream, powdered sugar, and/or fruit.</ul>
+    </div>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // flour Calculation
+       let flour = document.querySelector("#ingredient-flour");
+       flour.textContent = 1 * value;
+       
+       // butter Calculation
+       let sugar = document.querySelector("#ingredient-sugar");
+       sugar.textContent = 1 * value;
+       
+       // bakingPowder Calculation
+       let bakingPowder = document.querySelector("#ingredient-bakingPowder");
+       bakingPowder.textContent = 2 * value;
+       
+       //  salt Calculation
+       let whiteSurgar = document.querySelector("#ingredient-salt");
+       whiteSurgar.textContent = 0.25 * value;
+       
+       //  egg Calculation
+       let egg = document.querySelector("#ingredient-egg");
+       egg.textContent = 1 * value;
+      
+       //  milk Calculation
+       let milk = document.querySelector("#ingredient-milk");
+       milk.textContent = 1 * value;
+      
+       //  cookingOil Calculation
+       let cookingOil = document.querySelector("#ingredient-cookingOil");
+       cookingOil.textContent = 2 * value;
+    });
+</script>
+</html>

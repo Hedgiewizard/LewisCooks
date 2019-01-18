@@ -1,0 +1,62 @@
+/*Named fonts*/
+$CP: 'Chakra-Petch', sans-serif;
+$text: 'Raleway', sans-serif;
+/*Named colors*/
+
+/*SCSS for Main.scss*/
+    html { 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Shadows Into Light', cursive;
+        grid-column: 6;
+        grid-row: 4;
+        }
+     #pb{
+        font-size: 30px;
+        font-style: oblique;
+        color: #710D0D;
+        width: auto;
+        padding-left: 1%;
+        margin: 0 32% 0 32%;
+        }
+    .content{
+        margin-top: 1em;
+        padding-top: 1%;
+        margin-left: 3.5em;
+        margin-right: 4.5em;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        font-family: 'Thasadith', sans-serif;
+        padding-bottom: 15%;
+        font-size: 15px;
+        }
+    #head{
+        font-size: 50px;
+        justify-content: center;
+        }
+    #what{
+        flex-direction: column;
+        column-count: 2;
+        }
+    .nav-button{
+        /*background-color: aliceblue;*/
+        background-color: blue;
+        min-width: 100px;
+        min-height: 40px;
+        max-width: 95%;
+        max-height: 90px;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 4px;
+        padding-left: 15px;
+        justify-content: center;
+        }
+    #bark img{
+        width: 100%;
+        height: auto
+        }
+    #directions{
+        size:15px;
+        }

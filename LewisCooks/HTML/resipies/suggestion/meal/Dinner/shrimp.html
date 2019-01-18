@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Team Lewis Cooking/Grilled Honey Sriracha Lime Shrimp</title>
+    <!--added fonts and stuff-->
+    <link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/mostPage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<style>
+    html { 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Shadows Into Light', cursive;
+        grid-column: 6;
+        grid-row: 4;
+        }
+     #pb{
+        font-size: 30px;
+        font-style: oblique;
+        color: #710D0D;
+        text-align: center;
+        width: auto;
+        padding-left: 1%;
+        text-align: center;
+        }
+    .content{
+        margin-top: 1.5em;
+        padding-top: 1%;
+        margin-left: 3.5em;
+        margin-right: 4.5em;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        font-family: 'Thasadith', sans-serif;
+        padding-bottom: 15%;
+        font-size: 15px;
+        }
+    #head{
+        font-size: 50px;
+        justify-content: center;
+        }
+    #what{
+        flex-direction: column;
+        column-count: 2;
+        }
+    .nav-button{
+        /*background-color: aliceblue;*/
+        background-color: blue;
+        min-width: 100px;
+        min-height: 40px;
+        max-width: 95%;
+        max-height: 90px;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 4px;
+        padding-left: 15px;
+        }
+    #bark img{
+        width: 50%;
+        height: auto
+        text-align: center;
+        vertical-align: middle; 
+        }
+    #directions{
+        size:15px;
+        }
+    </style>
+<body>
+    <img a="https://www.recipegirl.com/wp-content/uploads/2007/12/Chocolate-Peppermint-Bark-Cookies-1.jpg">
+    <div id="pb">
+        <h1><b>Grilled Honey Sriracha Lime Shrimp</b></h1>
+    </div>
+        <h2>&nbsp; These shrimp are mouth watering. They are sweet with a spicy aftertaste with just a hint of lime. <a href="#StartTheResipie">Click to skip</a></h2>
+        <div id="bark">
+            <img src="https://rasamalaysia.com/wp-content/uploads/2015/05/honey-sriracha-shrimp4.jpg">
+        </div>
+    <div class="content">
+        <a id="StartTheResipie">Ok, now that's out of the way lets get started.<a>
+        <p>How many servings do you want?(write it in decimal format) <input id="servingInput" type="number" name="serving" value="1"></p>
+            <p>Prep Time: 10 minutes 
+                <br>Cook Time: 25 minutes
+            </p>
+    <div id="what-you-will-need">
+        <h2>What you will need</h2>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-butter">3</span> Tbsp Butter</ol>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-cloves">2</span> Cloves of garlic minced</ol>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-paprika">1</span> tsp of smoked paprika</ol>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-sriracha">3</span> Tbsp Sriracha</ol>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-honey">4</span> Tbsp Honey</ol>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-lime">1</span> Tbsp Lime Juice</ol>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-shrimp">24</span> Shrimp</ol>
+         <ol><i class="fas fa-circle"></i>&nbsp; <span id="ingredient-bamboo">6</span> Bamboo Skewers</ol>
+    </div>
+    <div id="how-to">
+        <h2>DIRECTIONS</h2>
+        <ol>1. &nbsp; Heat grill to 500 degrees.</ol>
+        <ol>2. &nbsp; While grill is heating up prepare the sauce. In a saucepan add butter over medium heat. Once melted add garlic and let cook for about a minute. Add paprika, sriracha, honey, and lime juice. Stir all ingredients and simmer for about 4-5 minutes. Remove from heat.</ol>
+        <ol>3. &nbsp; Place 6 shrimp on each skewer. Place on hot grill and cook on each side for 2-3 minutes. After turning the first time baste shrimp with honey sriracha sauce. Flip after 2-3 minutes and baste again. Flip again after another minute and baste both sides one more time. Once shrimp are completely cooked remove from grill.</ol>
+    </div>
+    </div>
+</body>
+<script>
+    let servingInput = document.querySelector("#servingInput");
+    servingInput.addEventListener("input", function() {
+       let value = servingInput.value;
+       
+       // butter Calculation
+       let butter = document.querySelector("#ingredient-butter");
+       butter.textContent = 3 * value;
+       
+       // cloves Calculation
+       let cloves = document.querySelector("#ingredient-cloves");
+       cloves.textContent = 2 * value;
+       
+       // paprika Calculation
+       let paprika = document.querySelector("#ingredient-paprika");
+       paprika.textContent = 1 * value;
+       
+       // sriracha Calculation
+       let sriracha = document.querySelector("#ingredient-sriracha");
+       sriracha.textContent = 3 * value;
+       
+       // honey Calculation
+       let honey = document.querySelector("#ingredient-honey");
+       honey.textContent = 4 * value;
+       
+       // lime Calculation
+       let lime = document.querySelector("#ingredient-lime");
+       lime.textContent = 1 * value;
+       
+       // shrimp Calculation
+       let shrimp = document.querySelector("#ingredient-shrimp");
+       shrimp.textContent = 24 * value;
+       
+       // bamboo Calculation
+       let bamboo = document.querySelector("#ingredient-bamboo");
+       bamboo.textContent = 6 * value;
+    });
+</script>
+</html>
